@@ -1,5 +1,6 @@
 # TESS 系外行星自动挖掘与深度验证项目（v2.2 加固版）
 
+> **[English](./README_EN.md)** | **[简体中文](./README.md)**  
 > **项目目录**：`d:\SPARK\tess_exoplanet\`（Windows 控制与归档端） ↔ Jetson AGX Orin `/home/data/astro_tess/`（无人值守计算端）  
 > **最后更新**：2026-11-21  
 > **当前状态**：**v2.2 加固版已完成 Batch 7（`hybrid` 模式试水）并自动停机（累计已扫 700 颗科学目标星），本地看板运行于 `http://127.0.0.1:18805/`，随时可启动 Batch 8+。**
