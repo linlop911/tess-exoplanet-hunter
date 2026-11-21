@@ -1,0 +1,14 @@
+{
+  "261136679": [
+    {"planet": "pi Men c", "period_days": 6.267823, "epoch_btjd": 1325.5041}
+  ],
+  "150428135": [
+    {"planet": "TOI-700 b", "period_days": 9.97722, "epoch_btjd": 1880.0994},
+    {"planet": "TOI-700 c", "period_days": 16.0511039, "epoch_btjd": 1821.6219},
+    {"planet": "TOI-700 e", "period_days": 27.810124, "epoch_btjd": 3772.46343}
+  ],
+  "source": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "query": "select pl_name,tic_id,pl_orbper,pl_tranmid,pl_trandur from ps where default_flag=1 and tic_id in ('TIC 261136679','TIC 150428135')",
+  "catalog_epoch_scale": "BJD (PS does not specify TDB versus UTC for these rows)",
+  "match_tolerance": "Half of the measured transit duration"
+}

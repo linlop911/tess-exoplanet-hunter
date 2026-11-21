@@ -1,0 +1,183 @@
+{
+  "search_code_sha256": "835c8400e1aae33f5b7dd5be9dd3083e1d937518eb089ce7a5244404f63923ee",
+  "period_days": [
+    0.8,
+    45
+  ],
+  "targets": [
+    {
+      "tic": 150428135,
+      "sectors": [
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13
+      ],
+      "matches": [
+        {
+          "kind": "periodic",
+          "period_days": 16.05125925903763,
+          "epoch_btjd": 1340.089939446761,
+          "duration_days": 0.041666666666666664,
+          "depth_ppm": 2351.2365956896706,
+          "snr": 26.421940934195376,
+          "sde": 23.786980005939313,
+          "mad_sde": 23.786980005939313,
+          "first_peak": true,
+          "covered_events": 12,
+          "iteration": 1,
+          "planet": "TOI-700 c",
+          "period_error_pct": 0.0009679025106068551
+        },
+        {
+          "kind": "periodic",
+          "period_days": 9.977261003064077,
+          "epoch_btjd": 1331.3503561134276,
+          "duration_days": 0.08333333333333333,
+          "depth_ppm": 463.5020341565167,
+          "snr": 9.937232561121371,
+          "sde": 9.816599210859458,
+          "mad_sde": 9.816599210859458,
+          "first_peak": true,
+          "covered_events": 22,
+          "iteration": 2,
+          "planet": "TOI-700 b",
+          "period_error_pct": 0.00041096682319441413
+        },
+        {
+          "kind": "periodic",
+          "period_days": 37.426052844937296,
+          "epoch_btjd": 1330.4753561134273,
+          "duration_days": 0.125,
+          "depth_ppm": 642.3805561576947,
+          "snr": 9.589728476636324,
+          "sde": 9.724392313981742,
+          "mad_sde": 9.724392313981742,
+          "first_peak": true,
+          "covered_events": 7,
+          "iteration": 3,
+          "planet": "TOI-700 d",
+          "period_error_pct": 0.0069364113991277065
+        }
+      ],
+      "signals": [
+        {
+          "kind": "periodic",
+          "period_days": 16.05125925903763,
+          "epoch_btjd": 1340.089939446761,
+          "duration_days": 0.041666666666666664,
+          "depth_ppm": 2351.2365956896706,
+          "snr": 26.421940934195376,
+          "sde": 23.786980005939313,
+          "mad_sde": 23.786980005939313,
+          "first_peak": true,
+          "covered_events": 12,
+          "iteration": 1
+        },
+        {
+          "kind": "periodic",
+          "period_days": 9.977261003064077,
+          "epoch_btjd": 1331.3503561134276,
+          "duration_days": 0.08333333333333333,
+          "depth_ppm": 463.5020341565167,
+          "snr": 9.937232561121371,
+          "sde": 9.816599210859458,
+          "mad_sde": 9.816599210859458,
+          "first_peak": true,
+          "covered_events": 22,
+          "iteration": 2
+        },
+        {
+          "kind": "periodic",
+          "period_days": 37.426052844937296,
+          "epoch_btjd": 1330.4753561134273,
+          "duration_days": 0.125,
+          "depth_ppm": 642.3805561576947,
+          "snr": 9.589728476636324,
+          "sde": 9.724392313981742,
+          "mad_sde": 9.724392313981742,
+          "first_peak": true,
+          "covered_events": 7,
+          "iteration": 3
+        }
+      ],
+      "passed": true
+    },
+    {
+      "tic": 261136679,
+      "sectors": [
+        1,
+        4,
+        8,
+        11,
+        12
+      ],
+      "matches": [
+        {
+          "kind": "periodic",
+          "period_days": 6.26794372374017,
+          "epoch_btjd": 1325.497654900695,
+          "duration_days": 0.125,
+          "depth_ppm": 261.7759438934963,
+          "snr": 68.16322091663562,
+          "sde": 13.454915331575542,
+          "mad_sde": 13.454915331575542,
+          "first_peak": true,
+          "covered_events": 16,
+          "iteration": 1,
+          "planet": "pi Men c",
+          "period_error_pct": 0.0019260872581972066
+        }
+      ],
+      "signals": [
+        {
+          "kind": "periodic",
+          "period_days": 6.26794372374017,
+          "epoch_btjd": 1325.497654900695,
+          "duration_days": 0.125,
+          "depth_ppm": 261.7759438934963,
+          "snr": 68.16322091663562,
+          "sde": 13.454915331575542,
+          "mad_sde": 13.454915331575542,
+          "first_peak": true,
+          "covered_events": 16,
+          "iteration": 1
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "download_source": "MAST AWS public archive (verified cached products reused)",
+  "source_setup_seconds": 0.001,
+  "single_injection": {
+    "passed": true,
+    "epoch_btjd": 1326.5622222479687,
+    "depth_ppm": 952.0798191771082,
+    "duration_hours": 4,
+    "matches": [
+      {
+        "epoch_btjd": 1326.5622222479687,
+        "duration_hours": 4,
+        "snr": 63.462038498319274,
+        "depth_ppm": 945.1345043342235,
+        "kind": "single",
+        "period_days": null,
+        "sde": null,
+        "mad_sde": null,
+        "depth_over_local_mad": 8.354535338850685,
+        "shoulder_step_sigma": 0.1622124781242118
+      }
+    ],
+    "edge_btjd": 1327.8385961463969,
+    "edge_hits": []
+  },
+  "elapsed_seconds": 90.4,
+  "passed": true
+}

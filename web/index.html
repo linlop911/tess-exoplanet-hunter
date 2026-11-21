@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESS Observatory · 系外行星搜星看板</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot" id="liveDot"></span>
+      <div>
+        <h1>TESS Observatory <span class="ver">v2.2</span></h1>
+        <p class="sub" id="statusSub">正在读取本地同步状态…</p>
+      </div>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="overview">总览与批次</button>
+      <button class="tab" data-tab="candidates">候选星审阅台</button>
+      <button class="tab" data-tab="deepvet">深度证伪档案</button>
+    </nav>
+    <div class="top-actions">
+      <span class="pill" id="goldenPill">黄金门禁: --</span>
+      <span class="pill muted" id="syncTimePill">同步: --</span>
+      <button class="btn" id="refreshBtn" title="立即刷新">刷新</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- TAB 1: OVERVIEW & BATCHES -->
+    <section id="tab-overview" class="view active">
+      <div class="kpi-grid" id="kpiGrid"></div>
+
+      <div class="section-head">
+        <h2>扫描批次时间线</h2>
+        <span class="hint">点击任意批次直接进入该批候选星审阅</span>
+      </div>
+      <div class="batch-grid" id="batchGrid"></div>
+    </section>
+
+    <!-- TAB 2: CANDIDATES TRIAGE -->
+    <section id="tab-candidates" class="view">
+      <div class="toolbar">
+        <select id="fBatch"><option value="all">全部批次</option></select>
+        <select id="fHp">
+          <option value="1" selected>仅高优候选</option>
+          <option value="all">全部候选</option>
+          <option value="0">非高优</option>
+        </select>
+        <select id="fKind">
+          <option value="all">全部类型</option>
+          <option value="periodic">周期 (periodic)</option>
+          <option value="single">单凌星 (single)</option>
+        </select>
+        <select id="fCatalog">
+          <option value="all">全部目录状态</option>
+          <option value="UNCATALOGED">UNCATALOGED</option>
+          <option value="KNOWN_TOI">KNOWN_TOI</option>
+          <option value="CONFIRMED">CONFIRMED</option>
+          <option value="KNOWN_EB">KNOWN_EB</option>
+        </select>
+        <select id="fTriage">
+          <option value="all">全部复核标记</option>
+          <option value="unreviewed">未复核</option>
+          <option value="deep_dive">待深挖</option>
+          <option value="promising">疑似真行星</option>
+          <option value="rejected">已排除</option>
+        </select>
+        <input id="fMinSnr" type="number" step="1" min="0" placeholder="最小 SNR" class="num-in">
+        <input id="fMinSde" type="number" step="0.5" min="0" placeholder="最小 SDE" class="num-in">
+        <input id="fSearch" type="search" placeholder="搜索 TIC ID…" class="search-in">
+        <span class="count-badge" id="candCount">0 条</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>批次</th>
+              <th>TIC</th>
+              <th>类型</th>
+              <th data-sort="period_days" class="sortable">周期 P (d)</th>
+              <th data-sort="depth_ppm" class="sortable">深度 (ppm)</th>
+              <th data-sort="snr" class="sortable">SNR</th>
+              <th data-sort="sde" class="sortable">SDE</th>
+              <th data-sort="rp_rearth" class="sortable">Rp (R⊕)</th>
+              <th>RUWE</th>
+              <th>核心核验</th>
+              <th>图</th>
+              <th>复核</th>
+            </tr>
+          </thead>
+          <tbody id="candTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- TAB 3: DEEP VET & DEEP DIVES -->
+    <section id="tab-deepvet" class="view">
+      <div class="kpi-grid" id="dvKpiGrid"></div>
+      <div class="section-head">
+        <h2>个案深度证伪档案（Deep Dive）</h2>
+      </div>
+      <div id="deepDiveList" class="deep-dive-list"></div>
+
+      <div class="section-head">
+        <h2>B2–B6 42 条高优信号深度证伪明细</h2>
+        <span class="hint">来源：outputs/v21/deep_vet_top10/MASTER_HITS_deep_vetted.csv</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>批次</th>
+              <th>TIC</th>
+              <th>周期 (d)</th>
+              <th>深度 (ppm)</th>
+              <th>原始 SNR</th>
+              <th>干净 SNR</th>
+              <th>D/T_circ</th>
+              <th>ΔBIC(U-Sm)</th>
+              <th>分级</th>
+              <th>首要归因</th>
+            </tr>
+          </thead>
+          <tbody id="dvTbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- INSPECTOR MODAL / LIGHTBOX -->
+  <div id="inspector" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-head">
+        <div>
+          <h3 id="insTitle">TIC --</h3>
+          <p class="sub" id="insMeta">--</p>
+        </div>
+        <div class="modal-nav">
+          <button class="btn" id="prevCandBtn" title="上一颗 (↑)">↑ 上一颗</button>
+          <button class="btn" id="nextCandBtn" title="下一颗 (↓)">↓ 下一颗</button>
+          <button class="btn danger" id="closeInsBtn" title="关闭 (Esc)">✕</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="ins-plot-pane">
+          <div id="insPlotWrap" class="plot-wrap">
+            <img id="insImg" alt="候选四联诊断图">
+            <div id="insNoImg" class="empty-plot hidden">该候选未生成 Top-15 四联诊断图</div>
+          </div>
+          <p class="hint">点击图片可切换放大/适应窗口；支持键盘 ↑ / ↓ 快速切换候选星</p>
+        </div>
+        <div class="ins-info-pane">
+          <div class="triage-box">
+            <h4>本地人工复核标记</h4>
+            <div class="triage-btns">
+              <button class="t-btn" data-status="deep_dive">★ 待深挖</button>
+              <button class="t-btn" data-status="promising">✓ 疑似真行星</button>
+              <button class="t-btn" data-status="rejected">✕ 已排除</button>
+              <button class="t-btn" data-status="unreviewed">重置</button>
+            </div>
+            <textarea id="triageNote" rows="2" placeholder="写下人工复核备注（自动保存至 web/triage_notes.json）…"></textarea>
+            <button class="btn primary" id="saveTriageBtn">保存标记与备注</button>
+          </div>
+          <div class="vet-box">
+            <h4>物理与统计核验明细</h4>
+            <div id="insVetGrid" class="vet-grid"></div>
+          </div>
+          <details class="raw-json">
+            <summary>查看完整 JSON 证据</summary>
+            <pre id="insRawJson"></pre>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

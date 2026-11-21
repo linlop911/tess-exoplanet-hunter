@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Local secrets & environment
+.env
+.secrets/
+Jetson-SSH*.txt
+
+# Local runtime state, logs & user triage notes
+logs/
+web/triage_notes.json
+scripts/v21_backup/
+
+# Bulk raw / intermediate batch outputs (keep golden & showcase deep-vet/deep-dive reports)
+outputs/golden/
+outputs/golden_expanded/
+outputs/campaign*
+outputs/v21/.receiver.lock
+outputs/v21/.monitor-notified.json
+outputs/v21/rolling_v21.log
+outputs/v21/v21_smoke.log
+outputs/v21/scanner_state.json
+outputs/v21/sync_status.json
+outputs/v21/v21_monitor.json
+outputs/v21/STOP_REASON.txt
+outputs/v21/MASTER_HITS.*
+outputs/v21/HIT_ALERT_*.md
+outputs/v21/v21_batch_*/
+outputs/v21/deep_vet_top10_v1/
+outputs/v21/deep_vet_qa_preliminary/
+outputs/v21/deep_vet_top10/evidence.json
+outputs/v21/deep_vet_top10/catalog_audit.json
+outputs/v21/deep_vet_top10/transfer_ledger.json
+outputs/v21/deep_vet_top10/review_audit.json

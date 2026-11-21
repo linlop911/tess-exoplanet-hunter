@@ -1,0 +1,134 @@
+[
+  {
+    "tic": 150428135,
+    "sector": 1,
+    "filename": "tess2018206045859-s0001-0000000150428135-0120-s_lc.fits",
+    "version": "0120",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0001/0000/0001/5042/8135/tess2018206045859-s0001-0000000150428135-0120-s_lc.fits",
+    "size": 2039040,
+    "sha256": "4b2aa5d5584b4cc3f4e56eb6d39476ceb3d9176921d5074915f6dd70e189487e",
+    "rows": 20076,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 261136679,
+    "sector": 1,
+    "filename": "tess2018206045859-s0001-0000000261136679-0120-s_lc.fits",
+    "version": "0120",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0001/0000/0002/6113/6679/tess2018206045859-s0001-0000000261136679-0120-s_lc.fits",
+    "size": 2039040,
+    "sha256": "1eecffff3afa7e8c4ad763b6907e62447bacf339968292d86be45acd9bf1d609",
+    "rows": 20076,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 3,
+    "filename": "tess2018263035959-s0003-0000000150428135-0123-s_lc.fits",
+    "version": "0123",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0003/0000/0001/5042/8135/tess2018263035959-s0003-0000000150428135-0123-s_lc.fits",
+    "size": 1998720,
+    "sha256": "8fc37ca3d0e9f065f74505aaad536554b171627792f22bacb442e515603ed241",
+    "rows": 19692,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 4,
+    "filename": "tess2018292075959-s0004-0000000150428135-0124-s_lc.fits",
+    "version": "0124",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0004/0000/0001/5042/8135/tess2018292075959-s0004-0000000150428135-0124-s_lc.fits",
+    "size": 1897920,
+    "sha256": "3dfee4581a203fcea0617b82ce5a8874b85c83dfabc9d3a0400f22378b15a259",
+    "rows": 18684,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 5,
+    "filename": "tess2018319095959-s0005-0000000150428135-0125-s_lc.fits",
+    "version": "0125",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0005/0000/0001/5042/8135/tess2018319095959-s0005-0000000150428135-0125-s_lc.fits",
+    "size": 1923840,
+    "sha256": "d5724073e5c679034462fc8cda1aec06a35a7b4eee4d929ad735c51bb3a99a12",
+    "rows": 18944,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 6,
+    "filename": "tess2018349182500-s0006-0000000150428135-0126-s_lc.fits",
+    "version": "0126",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0006/0000/0001/5042/8135/tess2018349182500-s0006-0000000150428135-0126-s_lc.fits",
+    "size": 1598400,
+    "sha256": "e891db5b733e8405564a73e751fd7de308f0913bde615c6da10c2b507034531c",
+    "rows": 15678,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 7,
+    "filename": "tess2019006130736-s0007-0000000150428135-0131-s_lc.fits",
+    "version": "0131",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0007/0000/0001/5042/8135/tess2019006130736-s0007-0000000150428135-0131-s_lc.fits",
+    "size": 1791360,
+    "sha256": "df124d7633607b08cf6a88cbeedbcf27dc6fc90f5f42d30d372438ffa3951f22",
+    "rows": 17612,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 8,
+    "filename": "tess2019032160000-s0008-0000000150428135-0136-s_lc.fits",
+    "version": "0136",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0008/0000/0001/5042/8135/tess2019032160000-s0008-0000000150428135-0136-s_lc.fits",
+    "size": 1805760,
+    "sha256": "71fda6e3112c38b4ba2bd127d8cebaf5037f3d685092a3a928538cce79c2707e",
+    "rows": 17755,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 9,
+    "filename": "tess2019058134432-s0009-0000000150428135-0139-s_lc.fits",
+    "version": "0139",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0009/0000/0001/5042/8135/tess2019058134432-s0009-0000000150428135-0139-s_lc.fits",
+    "size": 1848960,
+    "sha256": "f40a8260af85fbdfe18825edda04152c9296bd78b71e7d286e2d2334eeb98652",
+    "rows": 18187,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 10,
+    "filename": "tess2019085135100-s0010-0000000150428135-0140-s_lc.fits",
+    "version": "0140",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0010/0000/0001/5042/8135/tess2019085135100-s0010-0000000150428135-0140-s_lc.fits",
+    "size": 1920960,
+    "sha256": "c4c158ed8ce69855e318a4253ed92d971115171d065846d594cc4d594018bd59",
+    "rows": 18900,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 11,
+    "filename": "tess2019112060037-s0011-0000000150428135-0143-s_lc.fits",
+    "version": "0143",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0011/0000/0001/5042/8135/tess2019112060037-s0011-0000000150428135-0143-s_lc.fits",
+    "size": 1984320,
+    "sha256": "989fe6e3e9d7ce9e5d41086ac1bfe777bd778cd9c153c9335c74dba17dbcf3f8",
+    "rows": 19527,
+    "cadence_seconds": 120.0
+  },
+  {
+    "tic": 150428135,
+    "sector": 13,
+    "filename": "tess2019169103026-s0013-0000000150428135-0146-s_lc.fits",
+    "version": "0146",
+    "url": "https://s3.amazonaws.com/stpubdata/tess/public/tid/s0013/0000/0001/5042/8135/tess2019169103026-s0013-0000000150428135-0146-s_lc.fits",
+    "size": 2079360,
+    "sha256": "3abcf2509d9884a07c07778f5a4e6de7edc0d3cbeba4a704dcace09656fd19cc",
+    "rows": 20479,
+    "cadence_seconds": 120.0
+  }
+]
